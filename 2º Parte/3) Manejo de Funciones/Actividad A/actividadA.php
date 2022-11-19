@@ -8,7 +8,20 @@
     <title>Actividad A</title>
 </head>
 <body>
-    
+    <script>
+
+    </script>
+    <div class="container">
+        <div class="row">
+                <div class="col-12" id="content">
+                    <span>
+                        <h1>Hola</h1>
+                    </span>
+                </div>
+            </button>
+        </div>
+        <h2></h2>
+    </div>
 
     <script src="./JS/bootstrap.min.js"></script>
 </body>
