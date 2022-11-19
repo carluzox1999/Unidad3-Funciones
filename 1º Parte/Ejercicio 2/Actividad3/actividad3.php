@@ -15,7 +15,7 @@
         <b>result</b>, antes y después de la llamada a 
         la función.
     </p>
-    <script>
+    <script type="text/javascript">
         function addNumbers() {
             let firstNum = 4;
             let secondNum = 8;

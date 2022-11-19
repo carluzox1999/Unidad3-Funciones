@@ -16,7 +16,7 @@
         <b>< body ></b> de una página  y muestre el 
         resultado en la pantalla.
     </p>
-    <script>
+    <script type="text/javascript">
         function addOne() {
             let number = prompt("Introduce un número");
             let one = 1;

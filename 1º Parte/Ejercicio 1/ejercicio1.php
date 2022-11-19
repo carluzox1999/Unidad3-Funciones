@@ -17,7 +17,7 @@
         resultado es correcto. En esta segunda función 
         utilizaremos return para devolver el resultado.
     </p>
-    <script>
+    <script type="text/javascript">
         function getResult() {
             //Capturar resultado
             let result = prompt("Introduce el resultado de la operación");

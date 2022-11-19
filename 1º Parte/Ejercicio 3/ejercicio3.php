@@ -20,7 +20,7 @@
     <p>
 
     </p>
-    <script>
+    <script type="text/javascript">
         // Inicializamos el array que vamos a utilizar.
         let nombres = ["Carlos", "Samanta", "Arlette", "Kevin"];
     </script>
@@ -70,7 +70,7 @@
     <input type="button" onclick="fornormal()" value="Activar For">
     
     
-    <script>
+    <script type="text/javascript">
             function fornormal(){
                 for (let i = 0; i < nombres.length; i++) {
                     document.write(nombres[i] + " - ");
@@ -110,7 +110,7 @@
     <input type="button" onclick="foreachFE()" value="Activar For Each">
     
     
-    <script>
+    <script type="text/javascript">
             function foreachFE(){
                 nombres.forEach((nombre) => {
                     document.write(nombre + " - ");
@@ -154,7 +154,7 @@
     <input type="button" onclick="forin()" value="Activar For In">
 
 
-    <script>
+    <script type="text/javascript">
             function forin(){
                 for(const index in nombres) {
                     salida = nombres[index];
@@ -189,7 +189,7 @@
         </code>
     </p>
     
-    <script>
+    <script type="text/javascript">
         // -> For of
 
             function forof(){

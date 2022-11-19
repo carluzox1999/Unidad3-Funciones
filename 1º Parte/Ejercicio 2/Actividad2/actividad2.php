@@ -16,7 +16,7 @@
         parámetro es menor o igual que el segundo, 
         devuelva la suma de ambos parámetros
     </p>
-    <script>
+    <script type="text/javascript">
         function sumaParametros() {
             let x = prompt("Introduce un número");
             let y = prompt("Introduce un número");

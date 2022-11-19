@@ -8,7 +8,7 @@
     <title>Moneda</title>
 </head>
 <body>
-    <script>
+    <script type="text/javascript">
         var imagenes = ['./IMG/moenda-cara.png', './IMG/moenda-cruz.png'];
 
         let contador = 0;
