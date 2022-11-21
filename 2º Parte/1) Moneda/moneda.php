@@ -34,6 +34,20 @@
         <h1>Cara o cruz</h1>
     </div>
     <div class="container">
+        <h4>Elije una opción</h4>
+        <form action="moneda.php" method="post">
+            <div class="form-check">
+                <label class="form-check-label" for="cara" value="Cara">Cara</label>
+                <input class="form-check-input" type="radio" name="cara" id="cara">
+            </div>
+            <div class="form-check">
+                <label class="form-check-label" for="cruz" value="Cruz">Cruz</label>
+                <input class="form-check-input" type="radio" name="cruz" id="cruz">
+            </div>
+        </form>
+        <br>
+    </div>
+    <div class="container">
         <div class="row">
             <button type="button" onclick="lanzarMoneda()">
                 <div class="col-12" id="content">
