@@ -99,12 +99,12 @@
     </style>
 
     <script>
-        let ordenJuego = { piedra: 0, papel: 1, tijera: 2 };
-        let eleccion = ["piedra", "papel", "tijera"];
-
         let pGanadas = 0;
         let pPerdidas = 0;
         let pEmpatadas = 0;
+
+        let ordenJuego = { piedra: 0, papel: 1, tijera: 2 };
+        let eleccion = ["piedra", "papel", "tijera"];
 
         function selecBorrar() {
             document.getElementById("0").classList.remove("border-primary");
@@ -116,13 +116,13 @@
         }
 
         function selectImage() {
-            selecBorrar();
             let move = document.querySelector('input[name="juego"]:checked');
+            selecBorrar();
             document.getElementById(move.value).classList.remove("border-dark");
             document.getElementById(move.value).classList.add("border-primary");
         }
 
-        function orden() {
+        function ordenSelect() {
             setTimeout(function () {
                 document.getElementById("maq_2").classList.remove("order-first");
                 document.getElementById("maq_1").classList.remove("order-first");
@@ -130,29 +130,15 @@
             }, 1000);
         }
 
-        function juego() {
-            let resMaquina = Math.floor(Math.random() * 3);
-            let movMaquina = document.getElementById("movMaquina");
-            orden();
-            movMaquina.style.animation = "none";
-            setTimeout(function () {
-                movMaquina.style.animation = "slide 2s ease-out";
-            }, 100);
-            setTimeout(function () {
-                document.getElementById("maq_" + resMaquina).classList.add("order-first");
-            }, 1000);
-            comprobar_result(resMaquina);
-        }
-
-        function comprobar_result(resMaquina) {
+        function comprobarResultado(respuestaM) {
             let move = document.querySelector('input[name="juego"]:checked').value;
-            if (move == resMaquina) {
+            if (move == respuestaM) {
                 pEmpatadas++;
             }
 
             // Si gana piedra
             else if (move == ordenJuego["piedra"]) {
-                if (resMaquina == ordenJuego["tijera"]) {
+                if (respuestaM == ordenJuego["tijera"]) {
                     pGanadas++;
                 } else {
                     pPerdidas++;
@@ -161,7 +147,7 @@
 
             // Si gana papel
             else if (move == ordenJuego["papel"]) {
-                if (resMaquina == ordenJuego["piedra"]) {
+                if (respuestaM == ordenJuego["piedra"]) {
                     pGanadas++;
                 } else {
                     pPerdidas++;
@@ -170,7 +156,7 @@
 
             // Si gana tijera
             else if (move == ordenJuego["tijera"]) {
-                if (resMaquina == ordenJuego["papel"]) {
+                if (respuestaM == ordenJuego["papel"]) {
                     pGanadas++;
                 } else {
                     pPerdidas++;
@@ -182,6 +168,20 @@
                 document.getElementById("contMaquina").innerText = pPerdidas;
                 document.getElementById("contEmpate").innerText = pEmpatadas;
             }, 2100);
+        }
+
+        function juego() {
+            let respuestaM = Math.floor(Math.random() * 3);
+            let movimientoM = document.getElementById("movimientoM");
+            ordenSelect();
+            movimientoM.style.animation = "none";
+            setTimeout(function () {
+                movimientoM.style.animation = "slide 2s ease-out";
+            }, 100);
+            setTimeout(function () {
+                document.getElementById("maq_" + respuestaM).classList.add("order-first");
+            }, 1000);
+            comprobarResultado(respuestaM);
         }
     </script>
 
@@ -203,7 +203,7 @@
             </h6>
         </div>
         <div class="p-2 col-1 d-block mx-auto overflow-hidden">
-        <div id="movMaquina" class="d-flex">
+        <div id="movimientoM" class="d-flex">
           <img
             id="maq_0"
             alt="maquina"
@@ -249,7 +249,7 @@
         </div>
         
         <div class="mt-4 d-flex justify-content-center">
-            <button id="btn_lanzar" class="mx-2 col-4 btn btn-primary" onclick="juego()">
+            <button id="btn_lanzar" class="mx-2 col-4 btn btn-success" onclick="juego()">
                 Jugar
             </button>
         </div> 
