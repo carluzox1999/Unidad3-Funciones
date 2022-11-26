@@ -67,12 +67,12 @@
 
     <div class="container">
         <div class="d-flex justify-content-center align-items-center">
-            <h1 class="text-center">CARA / CRUZ</h1>
-        </div>
-
-        <div class='btn-group gap-0 d-md-flex justify-content-end' role='group'>
-            <button id="btn_lanzar" class="btn btn-primary" onclick="lanzarMoneda()">Lanzar</button>
-            <button class="btn btn-primary" onClick="window.location.reload();">Refrescar Página</button>
+            <div class="p-2">
+                <h1 class="text-center">CARA / CRUZ</h1>
+            </div>
+            <div class="p-2">
+                <button id="btn_lanzar" class="btn btn-success" onclick="lanzarMoneda()">Lanzar</button>
+            </div>
         </div>
 
         <div class="d-flex justify-content-center">
@@ -82,12 +82,12 @@
         </div>
         <div class="mt-4 d-flex justify-content-center">
             <div class="row">
-                <p id="cont-cara" class="bg-light rounded">
+                <h6 id="cont-cara">
                     Cara: 0
-                </p>
-                <p id="cont-cruz" class="bg-light rounded">
+                </h6>
+                <h6 id="cont-cruz">
                     Cruz: 0
-                </p>
+                </h6>
             </div>
 
         </div>

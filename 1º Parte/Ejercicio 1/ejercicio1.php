@@ -8,15 +8,6 @@
     <title>Ejercicio 1</title>
 </head>
 <body>
-    <p>
-        <b>Ejercicio 1:</b> Realizar un programa que 
-        solicite al usuario el resultado de una operación 
-        aritmética dada. Utilizar dos funciones. La 
-        primera captura el resultado introducido por el 
-        usuario e invoca otra función que verifica si el 
-        resultado es correcto. En esta segunda función 
-        utilizaremos return para devolver el resultado.
-    </p>
     <script type="text/javascript">
         function getResult() {
             //Capturar resultado
@@ -45,7 +36,25 @@
         
     </script>
 
-    <input type="button" onclick="total()" value="Activar Función">
+    <div class="container">
+        <div class="p-2">
+            <h6>
+                <b>Ejercicio 1:</b> Realizar un programa que 
+                solicite al usuario el resultado de una operación 
+                aritmética dada. Utilizar dos funciones. La 
+                primera captura el resultado introducido por el 
+                usuario e invoca otra función que verifica si el 
+                resultado es correcto. En esta segunda función 
+                utilizaremos return para devolver el resultado.
+            </h6>
+        </div>
+        <div class="p-2 d-flex justify-content-center">
+            <input type="button" onclick="total()" value="Activar Función">
+        </div>
+        
+
+    </div>
+    
 
     <script src="./JS/bootstrap.min.js"></script>
 </body>

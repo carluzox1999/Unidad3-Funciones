@@ -8,14 +8,6 @@
     <title>Actividad 1</title>
 </head>
 <body>
-    <p>
-        <b>Actividad 1:</b> Defina una función que acoja 
-        un argumento numérico, que incremente ese 
-        argumento y que después lo devuelva al emisor 
-        de la llamada. Invoque esa función desde la sección
-        <b>< body ></b> de una página  y muestre el 
-        resultado en la pantalla.
-    </p>
     <script type="text/javascript">
         function addOne() {
             let number = prompt("Introduce un número");
@@ -24,7 +16,23 @@
             document.write(vsum);
         }
     </script>
-    <input type="button" onclick="addOne()" value="Activar Función">
+
+    <div class="container">
+        <div class="p-2">
+            <h6>
+                <b>Actividad 1:</b> Defina una función que acoja 
+                un argumento numérico, que incremente ese 
+                argumento y que después lo devuelva al emisor 
+                de la llamada. Invoque esa función desde la sección
+                <b>< body ></b> de una página  y muestre el 
+                resultado en la pantalla.
+            </h6>
+        </div>
+        
+        <div class="p-2 d-flex justify-content-center">
+            <input type="button" onclick="addOne()" value="Activar Función">
+        </div>
+    </div>
 
     <script src="./JS/bootstrap.min.js"></script>
 </body>
