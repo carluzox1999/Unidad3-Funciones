@@ -11,7 +11,7 @@
 
 <body>
     <style>
-        @keyframes rotar {
+        @keyframes rotarMoneda {
             0% {
                 transform: rotateY(0);
             }
@@ -29,8 +29,8 @@
 
         function actualizarConteoMoneda(cara, cruz) {
             setTimeout(function () {
-                document.getElementById("cont-cara").innerText = "Cara: " + cara;
-                document.getElementById("cont-cruz").innerText = "Cruz: " + cruz;
+                document.getElementById("contCara").innerText = "Cara: " + cara;
+                document.getElementById("contCruz").innerText = "Cruz: " + cruz;
             }, 3000);
         }
 
@@ -57,7 +57,7 @@
                 }, 2300);
             }
             setTimeout(function () {
-                moneda.style.animation = "rotar 3s forwards";
+                moneda.style.animation = "rotarMoneda 3s forwards";
             }, 100);
 
             botonLanzar();
@@ -82,10 +82,10 @@
         </div>
         <div class="mt-4 d-flex justify-content-center">
             <div class="row">
-                <h6 id="cont-cara">
+                <h6 id="contCara">
                     Cara: 0
                 </h6>
-                <h6 id="cont-cruz">
+                <h6 id="contCruz">
                     Cruz: 0
                 </h6>
             </div>

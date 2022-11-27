@@ -124,9 +124,9 @@
 
         function ordenSelect() {
             setTimeout(function () {
-                document.getElementById("maq_2").classList.remove("order-first");
-                document.getElementById("maq_1").classList.remove("order-first");
-                document.getElementById("maq_0").classList.remove("order-first");
+                document.getElementById("maquina2").classList.remove("order-first");
+                document.getElementById("maquina1").classList.remove("order-first");
+                document.getElementById("maquina0").classList.remove("order-first");
             }, 1000);
         }
 
@@ -179,7 +179,7 @@
                 movimientoM.style.animation = "slide 2s ease-out";
             }, 100);
             setTimeout(function () {
-                document.getElementById("maq_" + respuestaM).classList.add("order-first");
+                document.getElementById("maquina" + respuestaM).classList.add("order-first");
             }, 1000);
             comprobarResultado(respuestaM);
         }
@@ -205,19 +205,19 @@
         <div class="p-2 col-1 d-block mx-auto overflow-hidden">
         <div id="movimientoM" class="d-flex">
           <img
-            id="maq_0"
+            id="maquina0"
             alt="maquina"
             src="./IMG/piedra.png"
             class="img-fluid border border-2 mx-2"
           />
           <img
-            id="maq_1"
+            id="maquina1"
             alt="maquina"
             src="./IMG/papel.png"
             class="img-fluid border border-2 mx-2"
           />
           <img
-            id="maq_2"
+            id="maquina2"
             alt="maquina"
             src="./IMG/tijera.png"
             class="img-fluid border border-2 mx-2"
