@@ -11,27 +11,39 @@
 
 <body>
     <script type="text/javascript">
-        // function sumar(...datos) {
-        //     return [].slice.call(datos).reduce(
-        //         function (memo, current) {
-        //         return memo + current;
-        //         }, 
-        //     0);
-        // };
+        function suma(nums) {
+            let resultNums = 0;
+            let numeros = nums.split(",").map(Number);
+            for (let i = 0; i < numeros.length; i++) {
+                resultNums += numeros[i];
+            }
+            document.getElementById("resultNums").value = resultNums;
+        }
 
-        // function realizarSuma(){
-        //     let datos = document.getElementById("datos").value;
-        //     let resultado = sumar(datos);
-        //     document.getElementById("resultado").value = resultado;
-        // }
+        function accion_suma() {
+            let sumaError = document.getElementById("sumaError");
+            sumaError.innerText = "";
+            document.getElementById("resultNums").value = "";
+
+            let nums = document.getElementById("nums").value;
+            
+            if (isNaN(document.getElementById("nums").value)) {
+                document.getElementById("sumaError").innerHTML = "Error, debes introducir numeros";
+            } else{
+                document.getElementById("sumaError").innerHTML = "";
+            }
+
+            suma(nums);
+        }
     </script>
 
-    <h1>Número de argumentos variables</h1>
+    <h1>Paso de parámetros por valor y por referencia</h1>
     <div>
-        <p>Introduce los números que desea sumar separados por comas:</p>
-        <p>Números: <input type="text" id="datos" /></p>
-        <p><input type="button" value="Realizar la suma" onclick="realizarSuma();" /></p>
-        <p>Suma: <input type="text" id="resultado" readonly /></p>
+        <p>Por referencia los argumentos tienen que ser objetos:</p>
+        <p>Números: <input type="text" id="nums" /></p>
+        <p>Suma: <input type="text" id="resultNums" disabled/></p>
+        <p><input type="button" value="Intencambiar por valor" onclick="accion_suma();" /></p>
+        <p id="sumaError"></p>
     </div>
 
     <script src="./JS/bootstrap.min.js"></script>

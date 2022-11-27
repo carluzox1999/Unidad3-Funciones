@@ -179,6 +179,7 @@
                 movimientoM.style.animation = "slide 2s ease-out";
             }, 100);
             setTimeout(function () {
+                // Seleccionando el elemento que de por respuesta de maquina, añade la clase de lista orden-first
                 document.getElementById("maquina" + respuestaM).classList.add("order-first");
             }, 1000);
             comprobarResultado(respuestaM);
